@@ -10,9 +10,9 @@ html{
 }
 
 body {
-    background-image: url(/images/fundo2.avif);
+    background-image: url(/images/IMG_9828.PNG);
     background-repeat: repeat;
-    background-position:  bottom;
+    background-position:  center;
     background-size: cover;
     height: 100%;
     font-family: "Sora", sans-serif;
@@ -23,7 +23,7 @@ body {
     margin: auto;
 
     padding: 20px;
-    color: rgb(242, 255, 0);
+    color: rgb(255, 255, 255);
     height: 100%;
 
     display: flex;
@@ -58,10 +58,10 @@ body {
 }
 
 .list-item {
-    background-color: rgba(157, 0, 255, 0.288);
+    /* background-color: rgba(255, 255, 255, 0.288); */
     border-radius: 50px;
     font-size: 1.2em;
-    border: 1px solid rgba(255, 255, 255, 0.181); 
+    border: 2px solid rgba(255, 255, 255, 0.181); 
 
     height: 4em;
     display: flex;
@@ -110,6 +110,6 @@ a {
 }
 
 .list-item:hover {
-    background-color: yellow;
-    color: blueviolet;
+    background-color: rgb(252, 172, 255);
+    color: rgb(255, 255, 255);
 }
