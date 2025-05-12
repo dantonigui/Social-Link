@@ -10,7 +10,7 @@ html{
 }
 
 body {
-    background-image: url(./images/IMG_9828.PNG);
+    background-image: url(/images/IMG_9828.PNG);
     background-repeat: repeat;
     background-position:  center;
     background-size: cover;
