@@ -6,16 +6,42 @@
 
 html{
     height: 100vh;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 body {
-    background-image: url(/images/IMG_9828.PNG);
-    background-repeat: repeat;
-    background-position:  center;
-    background-size: cover;
+    background-color: rgb(255, 255, 255);
     height: 100%;
-    font-family: "Sora", sans-serif;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header > h1 {
+    /* font-size: 30px; */
+}
+
+.header-picture {
+    width: 100px;
+    height: 120px;
+    overflow: hidden;
+
+    
+}
+
+.header-picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* corta mantendo o centro */
+    object-position: center;
+    transform: scale(1.3);
 }
 
 .container {
@@ -23,7 +49,7 @@ body {
     margin: auto;
 
     padding: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(64, 1, 122);
     height: 100%;
 
     display: flex;
@@ -31,12 +57,7 @@ body {
     justify-content: center;
 }
 
-.profile-picture {
-    height: 100px;
-    background-color: aliceblue;
-    border-radius: 50%;
-    /* border: 1px solid white; */
-}
+
 
 .username {
     font-weight: 400;
@@ -46,7 +67,7 @@ body {
 
 .description {
     font-size: 1em;
-    color: #919193;
+    color: #4e014e;
 }
 
 .list {
@@ -61,10 +82,11 @@ body {
     /* background-color: rgba(255, 255, 255, 0.288); */
     border-radius: 50px;
     font-size: 1.2em;
-    border: 2px solid rgba(255, 255, 255, 0.181); 
+    border: 2px solid rgba(73, 0, 80, 0.181); 
 
     height: 4em;
     display: flex;
+    width: 100%;
 }
 
 .link {
@@ -73,6 +95,8 @@ body {
     align-items: center;
     flex-grow: 1;
     padding: 0 45px;
+    width: 100%;
+
 }
 
 .link>img {
@@ -94,7 +118,7 @@ footer {
     padding: 1em;
     background-color: #b200de9f;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 1px solid rgb(95, 0, 0);
 
     display: flex;
     justify-content: center;
@@ -110,6 +134,10 @@ a {
 }
 
 .list-item:hover {
-    background-color: rgb(252, 172, 255);
+    background-color: rgb(64, 1, 122);
     color: rgb(255, 255, 255);
+}
+
+i {
+    font-size: 20px;
 }
