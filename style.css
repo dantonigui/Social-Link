@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100vh;
+    font-size: 10px;
+}
+
+body {
+    background-color: #2D70D7;
+    height: 100%;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header > h1 {
+    /* font-size: 30px; */
+}
+
+.header-picture {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    background: url('/images/logotipo-zelin-white.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+.header-picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* corta mantendo o centro */
+    object-position: center;
+    transform: scale(1.3);
+}
+
+.container {
+    max-width: 540px;
+    margin: auto;
+
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.username {
+    font-weight: 400;
+    font-size: 2em;
+    margin: 16px 0;
+}
+
+.description {
+    font-size: 1em;
+    color: #FFFFFF;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin: 2em 0;
+}
+
+.list-item {
+    /* background-color: rgba(255, 255, 255, 0.288); */
+    border-radius: 50px;
+    font-size: 1.2em;
+    border: 2px solid rgba(73, 0, 80, 0.181); 
+
+    height: 4em;
+    display: flex;
+    width: 100%;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 45px;
+    width: 100%;
+
+}
+
+.link>img {
+    width: 1.2em;
+}
+
+@media screen and (min-width:815px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+footer {
+    display: flex;
+    gap: 1.5em;
+}
+
+.contact {
+    padding: 1em;
+    background-color: #2D70D7;
+    border-radius: 50%;
+    border: 1px solid rgb(95, 0, 0);
+
+    display: flex;
+    justify-content: center;
+}
+
+.contact:hover {
+    background-color: rgba(255, 255, 0, 0.34);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-item:hover {
+    background-color: #2D70D7;
+    color: rgb(255, 255, 255);
+}
+
+i {
+    font-size: 20px;
+}
