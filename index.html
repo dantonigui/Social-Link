@@ -87,9 +87,8 @@
         <!-- Instagram Zelin -->
         <li class="list-item">
             <a
-                    class="link instagram-link"
-                    href="https://www.instagram.com/zelinmusic/"
-                    data-username="zelinmusic"
+                    class="link"
+                    href="instagram://user?username=zelinmusic"
             >
                 Instagram Zelin
                 <i class="bi bi-instagram" aria-hidden="true"></i>
@@ -112,9 +111,8 @@
         <!-- Instagram Artista+ -->
         <li class="list-item">
             <a
-                    class="link instagram-link"
-                    href="https://www.instagram.com/artistamais/"
-                    data-username="artistamais"
+                    class="link"
+                    href="instagram://user?username=artistamais"
             >
                 Instagram Artista+
                 <i class="bi bi-instagram" aria-hidden="true"></i>
@@ -146,28 +144,39 @@
 </div>
 
 
+
 <script>
     document.querySelectorAll(".instagram-link").forEach((link) => {
         link.addEventListener("click", (event) => {
-            const isMobile = /Android|iPhone|iPad|iPod/i.test(
-                navigator.userAgent
-            );
-
-            if (!isMobile) return;
-
-            event.preventDefault();
-
             const username = link.dataset.username;
 
-            window.location.href =
-                `instagram://user?username=${encodeURIComponent(username)}`;
+            if (!username) return;
 
-            window.setTimeout(() => {
-                window.location.href = link.href;
-            }, 1500);
+            const profileUrl =
+                `https://www.instagram.com/${username}/`;
+
+            const isAndroid = /Android/i.test(navigator.userAgent);
+            const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+            if (isAndroid) {
+                event.preventDefault();
+
+                const intentUrl =
+                    `intent://www.instagram.com/${username}/#Intent;` +
+                    `scheme=https;` +
+                    `package=com.instagram.android;` +
+                    `S.browser_fallback_url=${encodeURIComponent(profileUrl)};end`;
+
+                window.location.href = intentUrl;
+            } else if (isIOS) {
+                // No iPhone, priorize o link oficial do perfil.
+                // O iOS decide se abre no app ou no navegador.
+                link.href = profileUrl;
+            }
         });
     });
 </script>
+
 
 </body>
 </html>
