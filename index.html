@@ -1,80 +1,177 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>DJ Zelin | Electronic Music</title>
-    <link href="style.css" rel="stylesheet">
+
+    <meta name="theme-color" content="rgb(64, 1, 122)">
+    <meta name="description" content="DJ Zelin — DJ e produtor musical. Ouça minhas músicas, acesse minhas redes sociais e entre em contato para bookings.">
+
+    <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <meta name="theme-color" content="rgb(64, 1, 122)">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Orbitron:wght@400..900&display=swap"
+            rel="stylesheet"
+    >
+
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
     <link rel="icon" type="image/png" href="/images/icon-zelin-preto.png">
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <div class="header-picture">
-                <!-- <img src="/images/logotipo-zelin-white.png" class="profile-picture" >  -->
-            </div>
-            <h1 class="username" >@zelinmusic</h1>
-            <p class="description" style="color: rgb(255, 255, 255);">DJ / Produtor Musical</p>
-        </header>
-        <ul class="list">
-            <li class="list-item">
-                <a class="link" target="_blank" rel="noopener noreferrer" href="https://www.beatport.com/pt/release/flames/7613042">
-                    Pre-order / Pré-compra <br>de Flames
-                    <img src="https://cdn.simpleicons.org/beatport" alt="Beatport" class="icon-beatport">
-                </a>
-            </li>
+<div class="container">
 
-            <li class="list-item"><a class="link" target="_blank" href="https://open.spotify.com/playlist/3No6tlVg81lGEtJz4cYX7d?si=d386df3fe6974cde">
-                Playlist 247 by Zelin
-                    <i class="bi bi-spotify"></i>
-                </a>
-            </li>
+    <header>
+        <div class="header-picture">
+            <!--
+            <img
+                src="/images/logotipo-zelin-white.png"
+                class="profile-picture"
+                alt="Logotipo DJ Zelin"
+            >
+            -->
+        </div>
 
-            <li class="list-item" id="list-instagram">
-                <a class="link" target="_blank"  href="https://www.instagram.com/zelinmusic/">
-                Instagram Zelin
-                <i class="bi bi-instagram"></i>
-                </a>
-            </li>
+        <h1 class="username">@zelinmusic</h1>
 
-            <li class="list-item"><a class="link" target="_blank" href="https://wa.me/5551998360788">
-                    Publicidade / Bookings
-                    <i class="bi bi-whatsapp"></i>
-                </a>
-            </li>
+        <p class="description" style="color: rgb(255, 255, 255);">
+            DJ / Produtor Musical
+        </p>
+    </header>
 
-            <li class="list-item" id="list-instagram"><a class="link" target="_blank"  href="https://www.instagram.com/artistamais/">
-                Instagram Artista+
-                <i class="bi bi-instagram"></i>
+    <ul class="list">
+
+        <!-- Beatport -->
+        <li class="list-item">
+            <a
+                    class="link"
+                    href="https://www.beatport.com/pt/release/flames/7613042"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                Pre-order / Pré-compra
+                <br>
+                de Flames
+
+                <img
+                        src="https://cdn.simpleicons.org/beatport"
+                        alt="Beatport"
+                        class="icon-beatport"
+                >
             </a>
-            </li>
+        </li>
 
-            <li class="list-item"><a class="link" target="_blank"  href="https://www.tiktok.com/@zelinwav">
-                    TikTok
-                    <i class="bi bi-tiktok"></i>
-                </a>
-            </li>
-        </ul>
-        <footer>
-            <div class="footer-bottom">
-                <p>© 2025 Todos os direitos reservados.</p>
-                <p>Desenvolvido por Guilherme D'antoni</p>
-            </div>
-        </footer>
+        <!-- Spotify -->
+        <li class="list-item">
+            <a
+                    class="link"
+                    href="https://open.spotify.com/playlist/3No6tlVg81lGEtJz4cYX7d?si=d386df3fe6974cde"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                Playlist 247 by Zelin
+                <i class="bi bi-spotify" aria-hidden="true"></i>
+            </a>
+        </li>
 
-    </div>
+        <!-- Instagram Zelin -->
+        <li class="list-item">
+            <a
+                    class="link instagram-link"
+                    href="https://www.instagram.com/zelinmusic/"
+                    data-username="zelinmusic"
+            >
+                Instagram Zelin
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+        </li>
+
+        <!-- WhatsApp -->
+        <li class="list-item">
+            <a
+                    class="link"
+                    href="https://wa.me/5551998360788"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                Publicidade / Bookings
+                <i class="bi bi-whatsapp" aria-hidden="true"></i>
+            </a>
+        </li>
+
+        <!-- Instagram Artista+ -->
+        <li class="list-item">
+            <a
+                    class="link instagram-link"
+                    href="https://www.instagram.com/artistamais/"
+                    data-username="artistamais"
+            >
+                Instagram Artista+
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+        </li>
+
+        <!-- TikTok -->
+        <li class="list-item">
+            <a
+                    class="link"
+                    href="https://www.tiktok.com/@zelinwav"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                TikTok
+                <i class="bi bi-tiktok" aria-hidden="true"></i>
+            </a>
+        </li>
+
+    </ul>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2026 Todos os direitos reservados.</p>
+            <p>Desenvolvido por Guilherme D'antoni</p>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+    document.querySelectorAll(".instagram-link").forEach((link) => {
+        link.addEventListener("click", (event) => {
+            // Em computadores, mantém o comportamento normal do link.
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(
+                navigator.userAgent
+            );
+
+            if (!isMobile) {
+                return;
+            }
+
+            event.preventDefault();
+
+            const username = link.dataset.username;
+            const webUrl = link.href;
+
+            // Tenta abrir o perfil no aplicativo Instagram.
+            window.location.href =
+                `instagram://user?username=${encodeURIComponent(username)}`;
+
+            // Se o aplicativo não abrir, tenta o perfil na web.
+            window.setTimeout(() => {
+                window.location.href = webUrl;
+            }, 1500);
+        });
+    });
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
