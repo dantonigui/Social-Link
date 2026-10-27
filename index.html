@@ -55,9 +55,9 @@
         <li class="list-item">
             <a
                     class="link"
-                    href="https://www.beatport.com/pt/release/flames/7613042"
                     target="_blank"
                     rel="noopener noreferrer"
+                    href="https://www.beatport.com/pt/release/flames/7613042"
             >
                 Pre-order / Pré-compra
                 <br>
@@ -75,9 +75,9 @@
         <li class="list-item">
             <a
                     class="link"
-                    href="https://open.spotify.com/playlist/3No6tlVg81lGEtJz4cYX7d?si=d386df3fe6974cde"
                     target="_blank"
                     rel="noopener noreferrer"
+                    href="https://open.spotify.com/playlist/3No6tlVg81lGEtJz4cYX7d?si=d386df3fe6974cde"
             >
                 Playlist 247 by Zelin
                 <i class="bi bi-spotify" aria-hidden="true"></i>
@@ -85,10 +85,12 @@
         </li>
 
         <!-- Instagram Zelin -->
-        <li class="list-item">
+        <li class="list-item" id="list-instagram">
             <a
                     class="link"
-                    href="instagram://user?username=zelinmusic"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/zelinmusic/"
             >
                 Instagram Zelin
                 <i class="bi bi-instagram" aria-hidden="true"></i>
@@ -99,9 +101,9 @@
         <li class="list-item">
             <a
                     class="link"
-                    href="https://wa.me/5551998360788"
                     target="_blank"
                     rel="noopener noreferrer"
+                    href="https://wa.me/5551998360788"
             >
                 Publicidade / Bookings
                 <i class="bi bi-whatsapp" aria-hidden="true"></i>
@@ -109,10 +111,12 @@
         </li>
 
         <!-- Instagram Artista+ -->
-        <li class="list-item">
+        <li class="list-item" id="list-instagram-artistamais">
             <a
                     class="link"
-                    href="instagram://user?username=artistamais"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/artistamais/"
             >
                 Instagram Artista+
                 <i class="bi bi-instagram" aria-hidden="true"></i>
@@ -123,9 +127,9 @@
         <li class="list-item">
             <a
                     class="link"
-                    href="https://www.tiktok.com/@zelinwav"
                     target="_blank"
                     rel="noopener noreferrer"
+                    href="https://www.tiktok.com/@zelinwav"
             >
                 TikTok
                 <i class="bi bi-tiktok" aria-hidden="true"></i>
@@ -142,41 +146,5 @@
     </footer>
 
 </div>
-
-
-
-<script>
-    document.querySelectorAll(".instagram-link").forEach((link) => {
-        link.addEventListener("click", (event) => {
-            const username = link.dataset.username;
-
-            if (!username) return;
-
-            const profileUrl =
-                `https://www.instagram.com/${username}/`;
-
-            const isAndroid = /Android/i.test(navigator.userAgent);
-            const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-            if (isAndroid) {
-                event.preventDefault();
-
-                const intentUrl =
-                    `intent://www.instagram.com/${username}/#Intent;` +
-                    `scheme=https;` +
-                    `package=com.instagram.android;` +
-                    `S.browser_fallback_url=${encodeURIComponent(profileUrl)};end`;
-
-                window.location.href = intentUrl;
-            } else if (isIOS) {
-                // No iPhone, priorize o link oficial do perfil.
-                // O iOS decide se abre no app ou no navegador.
-                link.href = profileUrl;
-            }
-        });
-    });
-</script>
-
-
 </body>
 </html>
