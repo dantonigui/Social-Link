@@ -145,33 +145,29 @@
 
 </div>
 
+
 <script>
     document.querySelectorAll(".instagram-link").forEach((link) => {
         link.addEventListener("click", (event) => {
-            // Em computadores, mantém o comportamento normal do link.
             const isMobile = /Android|iPhone|iPad|iPod/i.test(
                 navigator.userAgent
             );
 
-            if (!isMobile) {
-                return;
-            }
+            if (!isMobile) return;
 
             event.preventDefault();
 
             const username = link.dataset.username;
-            const webUrl = link.href;
 
-            // Tenta abrir o perfil no aplicativo Instagram.
             window.location.href =
                 `instagram://user?username=${encodeURIComponent(username)}`;
 
-            // Se o aplicativo não abrir, tenta o perfil na web.
             window.setTimeout(() => {
-                window.location.href = webUrl;
+                window.location.href = link.href;
             }, 1500);
         });
     });
 </script>
+
 </body>
 </html>
