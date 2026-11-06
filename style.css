@@ -182,6 +182,24 @@ footer {
     color: #CCCCCC;
 }
 
+/* Ícone Greenvalley */
+.link > img.icon-greenvalley {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    filter: brightness(0) invert(1);
+    transition: filter 0.2s ease;
+}
+
+/* Greenvalley branco -> azul no hover */
+.list-item:hover .icon-greenvalley {
+    filter: brightness(0) saturate(100%)
+    invert(37%) sepia(87%) saturate(1000%)
+    hue-rotate(195deg) brightness(90%) contrast(95%);
+}
+
 /* Telas maiores */
 @media screen and (min-width: 815px) {
     html {
